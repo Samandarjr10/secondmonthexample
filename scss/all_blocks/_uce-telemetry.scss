@@ -1,0 +1,258 @@
+.uce-telemetry__container {
+    padding-left: 165px;
+    padding-right: 165px;
+    padding-bottom: 200px;
+}
+
+.uce-telemetry__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.uce-telemetry__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 5;
+
+    &::before {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        background-image: url(./../images/main/Group32.svg);
+        background-repeat: no-repeat;
+        width: 737px;
+        height: 215px;
+        top: 67%;
+        left: 50%;
+        z-index: 60;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        width: 445px;
+        height: 445px;
+        top: 0;
+        left: 100%;
+        transform: translateX(64px);
+        border-radius: 50%;
+        background-color: $lightgrey;
+        z-index: 50;
+    }
+}
+
+.locate-app__item--easy {
+    position: relative;
+    z-index: 5;
+
+    &::before {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        background-image: url(./../images/main/Group13Copy.svg);
+        background-repeat: no-repeat;
+        width: 737px;
+        height: 140px;
+        top: 0;
+        transform: translateY(-7%);
+        left: -15%;
+        z-index: 70;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        width: 445px;
+        height: 445px;
+        top: -17px;
+        left: -25%;
+        transform: translateX(-50%);
+        border-radius: 50%;
+        background-color: $lightgrey;
+        z-index: 50;
+    }
+}
+
+.uce-telemetry__item--scoot {
+    &::before {
+        top: 20%;
+        transform: translateY(-7%);
+        left: 83%;
+    }
+}
+
+.uce-telemetry__item + .uce-telemetry__item {
+    margin-top: 150px;
+}
+
+.uce-telemetry__heading {
+    font-family: "Space Mono", "Arial", sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 48px;
+    color: $darkNavy;
+    max-width: 475px;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 24px;
+}
+
+.uce-telemetry__text {
+    max-width: 445px;
+    width: 100%;
+    line-height: 25px;
+    color: $darkNavy;
+    margin: 0;
+    margin-bottom: 40px;
+}
+
+.uce-telemetry__img {
+    border-radius: 50%;
+}
+
+@media only screen and (max-width: 1100px) {
+    .uce-telemetry__container {
+        padding-right: 30px;
+        padding-left: 30px;
+        text-align: center;
+    }
+
+    .uce-telemetry__item {
+        display: flex;
+        flex-direction: column-reverse;
+
+        &::before {
+            top: 40%;
+            left: 15%;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            display: inline-block;
+            width: 445px;
+            height: 445px;
+            top: 0;
+            left: 80%;
+            transform: translateX(64px);
+            border-radius: 50%;
+            background-color: $lightgrey;
+            z-index: 50;
+        }
+
+        &:nth-child(2) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .locate-app__item--easy {
+
+        &::before {
+            content: "";
+            position: absolute;
+            display: inline-block;
+            background-image: url(./../images/main/Group13Copy.svg);
+            background-repeat: no-repeat;
+            width: 737px;
+            height: 140px;
+            top: -25px;
+            transform: translateY(-7%);
+            left: -8%;
+            z-index: 70;
+        }
+    
+        &::after {
+            content: "";
+            position: absolute;
+            display: inline-block;
+            width: 445px;
+            height: 445px;
+            top: -17px;
+            left: -25%;
+            transform: translateX(-50%);
+            border-radius: 50%;
+            background-color: $lightgrey;
+            z-index: 50;
+        }
+    }
+
+    .uce-telemetry__item--scoot {
+        &::before {
+            top: 11%;
+            transform: translateY(-7%);
+            left: 50%;
+        }
+    }
+
+    .uce-telemetry__img {
+        margin: 0;
+        margin-bottom: 40px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .uce-telemetry__container {
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+
+    .uce-telemetry__item {
+        &::after {
+            display: none;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            display: inline-block;
+            background-image: url(./../images/main/Group32.svg);
+            background-repeat: no-repeat;
+            width: 522px;
+            height: 321px;
+            top: 17%;
+            left: -55px;
+            z-index: 60;
+        }
+    }
+
+    .locate-app__item--easy {
+        &::before {
+            &::before {
+                content: "";
+                position: absolute;
+                display: inline-block;
+                background-image: url(./../images/main/Group13Copy.svg);
+                background-repeat: no-repeat;
+                width: 737px;
+                height: 140px;
+                top: 0;
+                transform: translateY(-7%);
+                left: 0;
+                z-index: 70;
+            } 
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    .uce-telemetry__heading {
+        font-size: 32px;
+        line-height: 32px;
+        max-width: 311px;
+        width: 100%;
+    }
+
+    .uce-telemetry__text {
+        max-width: 311px;
+        width: 100%;
+    }
+}
+    
